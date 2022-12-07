@@ -82,7 +82,7 @@ export abstract class BaseRepository<TId, TEntity extends IAggregateRoot<TId>> {
     return {
       where,
       relations,
-    };
+    } as FindManyOptions<TEntity>;
   }
 
   async first(): Promise<TEntity> {

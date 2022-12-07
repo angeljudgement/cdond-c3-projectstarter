@@ -100,7 +100,7 @@ module.exports = {
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
             loader: 'css-loader',
-            query: {
+            options: {
               modules: false,
               sourceMap: !isProduction,
               importLoaders: 1,
@@ -184,10 +184,10 @@ module.exports = {
   },
   // https://webpack.js.org/configuration/devtool/
   devtool: isProduction ? 'hidden-source-map' : 'inline-source-map',
-  node: {
-    // workaround for webpack-dev-server issue
-    // https://github.com/webpack/webpack-dev-server/issues/60#issuecomment-103411179
-    fs: 'empty',
-    net: 'empty',
-  },
+  // node: {
+  //   // workaround for webpack-dev-server issue
+  //   // https://github.com/webpack/webpack-dev-server/issues/60#issuecomment-103411179
+  //   fs: 'empty',
+  //   net: 'empty',
+  // },
 };
