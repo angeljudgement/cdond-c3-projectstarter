@@ -11,7 +11,7 @@
   become: true
   copy:
     src: ~/project/artifact.tar.gz
-    dest: ~/artifact.tar.gz
+    dest: ~/backend/artifact.tar.gz
 
 #unpack and remove t
 - name: unpack backend files
